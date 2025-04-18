@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartHouse.unity
     guid: 12071ffd64dae364c84a893de254960f
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 05aa045ed706aba4b82e7d07deecb0af, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 6da6234cd2cd78d48a12918f2b6ac1e4, type: 2}
