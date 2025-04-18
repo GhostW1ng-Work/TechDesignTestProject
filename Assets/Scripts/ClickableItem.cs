@@ -1,17 +1,20 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator), typeof(AudioSource))]
 public class ClickableItem : MonoBehaviour
 {
 	private const string PLAY = "Play";
 
-	[Header("Audio")]
-	[SerializeField] private AudioSource _audioSource;
-
-	[Header("Animation")]
-	[SerializeField] private Animator _animator;
-
-	[Header("VFX")]
 	[SerializeField] private ParticleSystem _particles;
+
+	private AudioSource _audioSource;
+	private Animator _animator;
+
+	private void Start()
+	{
+		_audioSource = GetComponent<AudioSource>();
+		_animator = GetComponent<Animator>();
+	}
 
 	private void OnMouseDown()
 	{
@@ -20,7 +23,7 @@ public class ClickableItem : MonoBehaviour
 			_animator.SetTrigger(PLAY);
 		} 
 
-		if(_audioSource != null)
+		if(_audioSource.clip != null)
 		{
 			_audioSource.Play();
 		}
