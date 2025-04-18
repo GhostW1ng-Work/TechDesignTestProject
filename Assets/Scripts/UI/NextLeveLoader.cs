@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelChangeButton : MonoBehaviour
+public class NextLeveLoader : MonoBehaviour
 {
 	private Button _button;
 
