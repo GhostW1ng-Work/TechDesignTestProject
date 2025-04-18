@@ -5,6 +5,8 @@ public class ClickableItem : MonoBehaviour
 {
 	private const string PLAY = "Play";
 
+	[SerializeField] private int _minPitch = 1;
+	[SerializeField] private int _maxPitch = 4;
 	[SerializeField] private ParticleSystem _particles;
 
 	private AudioSource _audioSource;
@@ -25,6 +27,8 @@ public class ClickableItem : MonoBehaviour
 
 		if(_audioSource.clip != null)
 		{
+			int randomPitch = Random.Range(_minPitch, _maxPitch);
+			_audioSource.pitch = randomPitch;
 			_audioSource.Play();
 		}
 
